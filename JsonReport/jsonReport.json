@@ -1,0 +1,141 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Home\\Desktop\\Playwright\\playwright.config.ts",
+    "rootDir": "C:/Users/Home/Desktop/Playwright",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "dot",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "JsonReport/jsonReport.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "always"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/Home/Desktop/Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "chrome",
+        "name": "chrome",
+        "testDir": "C:/Users/Home/Desktop/Playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "POM/Tests/test1.test.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.33.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "POM\\Tests\\test1.test.ts",
+      "file": "POM/Tests/test1.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "My Test ",
+          "file": "POM/Tests/test1.test.ts",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Login",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "failed",
+                      "duration": 417528,
+                      "error": {
+                        "message": "page.selectOption: Error: Element is not a <select> element\n=========================== logs ===========================\nwaiting for locator('xpath=//div[contains(@class,\\' dropdown-menu-left \\')]')\n  locator resolved to <div x-placement=\"bottom-start\" class=\"dropdown-menu …>…</div>\n  selecting specified option(s)\n  Error: Element is not a <select> element\n============================================================",
+                        "stack": "Error: page.selectOption: Error: Element is not a <select> element\n=========================== logs ===========================\nwaiting for locator('xpath=//div[contains(@class,\\' dropdown-menu-left \\')]')\n  locator resolved to <div x-placement=\"bottom-start\" class=\"dropdown-menu …>…</div>\n  selecting specified option(s)\n  Error: Element is not a <select> element\n============================================================\n    at orderPlaced.selectProductCategory (C:\\Users\\Home\\Desktop\\Playwright\\POM\\Pages\\OrderSearch.ts:32:25)\n    at C:\\Users\\Home\\Desktop\\Playwright\\POM\\Tests\\test1.test.ts:36:5",
+                        "snippet": "\u001b[90m   at \u001b[39mPOM\\Pages\\OrderSearch.ts:32\n\n\u001b[0m \u001b[90m 30 |\u001b[39m     \u001b[36masync\u001b[39m selectProductCategory(){\u001b[0m\n\u001b[0m \u001b[90m 31 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[@id='entry_217822']//*[contains(@class,'btn dropdown-toggle')]\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mselectOption(\u001b[32m\"//div[contains(@class,' dropdown-menu-left ')]\"\u001b[39m\u001b[33m,\u001b[39m{ index \u001b[33m:\u001b[39m \u001b[35m4\u001b[39m})\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 33 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 34 |\u001b[39m }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Home\\Desktop\\Playwright\\POM\\Pages\\OrderSearch.ts",
+                            "column": 25,
+                            "line": 32
+                          },
+                          "message": "Error: page.selectOption: Error: Element is not a <select> element\n=========================== logs ===========================\nwaiting for locator('xpath=//div[contains(@class,\\' dropdown-menu-left \\')]')\n  locator resolved to <div x-placement=\"bottom-start\" class=\"dropdown-menu …>…</div>\n  selecting specified option(s)\n  Error: Element is not a <select> element\n============================================================\n\n\u001b[90m   at \u001b[39mPOM\\Pages\\OrderSearch.ts:32\n\n\u001b[0m \u001b[90m 30 |\u001b[39m     \u001b[36masync\u001b[39m selectProductCategory(){\u001b[0m\n\u001b[0m \u001b[90m 31 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[@id='entry_217822']//*[contains(@class,'btn dropdown-toggle')]\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mselectOption(\u001b[32m\"//div[contains(@class,' dropdown-menu-left ')]\"\u001b[39m\u001b[33m,\u001b[39m{ index \u001b[33m:\u001b[39m \u001b[35m4\u001b[39m})\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 33 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 34 |\u001b[39m }\u001b[0m\n\n\u001b[2m    at orderPlaced.selectProductCategory (C:\\Users\\Home\\Desktop\\Playwright\\POM\\Pages\\OrderSearch.ts:32:25)\u001b[22m\n\u001b[2m    at C:\\Users\\Home\\Desktop\\Playwright\\POM\\Tests\\test1.test.ts:36:5\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-01T05:18:30.500Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Home\\Desktop\\Playwright\\test-results\\POM-Tests-test1-My-Test-Login-chrome\\video.webm"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Home\\Desktop\\Playwright\\test-results\\POM-Tests-test1-My-Test-Login-chrome\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Home\\Desktop\\Playwright\\POM\\Pages\\OrderSearch.ts",
+                        "column": 25,
+                        "line": 32
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "2fc1d22381a737bc263c-2d48a979ea4567dc2c14",
+              "file": "POM/Tests/test1.test.ts",
+              "line": 33,
+              "column": 11
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
